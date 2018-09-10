@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ics</artifactId>
+    <name>ICS Library Management</name>
+    <groupId>pha.ics-library</groupId>
+    <description>
+        V1.31 (09/06/2018) add daylight time flag to DateValue
+        V1.30 (15/04/2018) fix bug in add method of DateObject, lost timezone
+        V1.29 (02/04/2018) upgrade date finder to cope with week numbers
+        V1.28 (10/03/2018) add support for child events
+        V1.27 add support for lines with multiple ":"s
+        V1.26 add new constructor to DateValue
+        V1.25 added difference methods to DateObject
+        V1.24 fix problems with timezones in DateObject not being used correctly
+        V1.23 remove utc from DateObject equals and add "addHours" method to DateValue
+        V1.22 set DateObject utc flag if time zone is UTC
+        V1.21 add date stamp method to events.
+        V1.20 extend duration builder to handle illegal format created by Android
+        V1.19 handle merging multiple DateList objects, with multiple EXDATE lines
+        V1.18 handle unknown field types, normally starting "X-***"
+        V1.17 fixed import of Google calendars that use space continuation
+        V1.16 fixed NP issue with event fields, when generating compound values
+        V1.15 added new TimeZoneProver interface
+        V1.14 added new add method to DateValue
+        V1.13 added support for timezone conversion in DateValue
+        V1.12 minor updates to value fields + full Duration support
+        V1.1 adds support for timezones
+    </description>
+    <version>1.31</version>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.intellij</groupId>
+            <artifactId>annotations</artifactId>
+            <version>12.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

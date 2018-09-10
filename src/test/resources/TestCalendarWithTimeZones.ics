@@ -1,0 +1,304 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:PUBLISH
+X-CALSTART:20160406T073000Z
+X-CALEND:20160505T093000Z
+X-CLIPSTART:20160405T230000Z
+X-CLIPEND:20160505T230000Z
+X-WR-RELCALID:{0000002E-DAD5-63C2-F7D0-B8EB037F0ADF}
+X-WR-CALNAME:Abbott\, Paul (UK London)
+BEGIN:VTIMEZONE
+TZID:Romance Standard Time
+BEGIN:STANDARD
+DTSTART:16011028T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010325T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:GMT Standard Time
+BEGIN:STANDARD
+DTSTART:16011028T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+TZOFFSETFROM:+0100
+TZOFFSETTO:-0000
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010325T010000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+TZOFFSETFROM:-0000
+TZOFFSETTO:+0100
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ATTENDEE;CN="Dano Sorensen, Henrik (IR Bridge)";RSVP=TRUE:mailto:henrik.da
+	noe@home.com
+ATTENDEE;CN="Krogh, Jesper (China Bridge)";RSVP=TRUE:mailto:jesper.krogh
+	@home.com
+ATTENDEE;CN="Abbott, Paul (UK London)";RSVP=TRUE;PARTSTAT=ACCEPTED:mailt
+	o:paul.h.abbott@home.com
+CLASS:PUBLIC
+CREATED:20160128T203610Z
+DESCRIPTION:Weekly meeting to keep IR and UK teams work aligned.\n\nPlease 
+	feel free to invite other people when/as appropriate\n\n(Made shorter and 
+	moved to Lync)\n\n........................................................
+	..........................................................................
+	.......\n\n <https://meet.ai.home.com/timothy.Smith/YMQN2DTT> Join 
+	online meeting\n\n <https://meet.ai.home.com/timothy.Smith/YMQN2DTT
+	> https://meet.ai.home.com/timothy.Smith/YMQN2DTT   \n\n <http://r.
+	office.microsoft.com/r/rlidOC10?clid=1033&p1=4&p2=1041&pc=oc&ver=4&subver=
+	0&bld=7185&bldver=0> First online meeting? \n\n[!OC([1033])!]\n\n.........
+	..........................................................................
+	......................................................\n\n
+DTEND;TZID="GMT Standard Time":20160406T090000
+DTSTAMP:20151207T080106Z
+DTSTART;TZID="GMT Standard Time":20160406T083000
+LAST-MODIFIED:20160128T203610Z
+LOCATION:Lync
+ORGANIZER;CN="Smith, Timothy (UK London)":mailto:timothy.Smith@home
+	ems.com
+PRIORITY:5
+RRULE:FREQ=WEEKLY;COUNT=5;BYDAY=WE
+SEQUENCE:0
+SUMMARY;LANGUAGE=en-gb:Anthony - IR/UK team work alignment
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000E0E6076DC530D101000000000000000
+	010000000614895605DFB3344AD71E52D43DD966C
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//E
+	N">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server ve
+	rsion 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n<!-- Converted f
+	rom text/rtf format -->\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><A NAME=""
+	><SPAN LANG="en-gb"></SPAN></A><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb
+	"><FONT FACE="Calibri">Weekly meeting to keep IR and UK teams work aligned
+	.</FONT></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"><FONT FACE="Calibri">
+	Please feel free to invite other people when/as appropriate</FONT></SPAN><
+	/P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN></P>\n\n<P DIR=LTR><SPAN LANG=
+	"en-gb"><FONT FACE="Calibri">(Made shorter and moved to Lync)</FONT></SPAN
+	></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><S
+	PAN LANG="en-gb"><FONT COLOR="#404040" SIZE=1 FACE="Segoe UI">............
+	..........................................................................
+	...................................................</FONT></SPAN><SPAN LAN
+	G="en-gb"><B></B></SPAN><SPAN LANG="en-gb"><B></B></SPAN><SPAN LANG="en-gb
+	"><B></B></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><A HREF="http
+	s://meet.ai.home.com/timothy.Smith/YMQN2DTT"><SPAN LANG="en-gb"></S
+	PAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"><U><FONT COLOR="#0066CC" 
+	SIZE=5 FACE="Segoe UI">Join online meeting</FONT></U></SPAN><SPAN LANG="en
+	-gb"></SPAN></A><SPAN LANG="en-gb"><B></B></SPAN><SPAN LANG="en-gb"><B></B
+	></SPAN><SPAN LANG="en-gb"><B></B></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en
+	-gb"></SPAN><A HREF="https://meet.ai.home.com/timothy.Smith/YMQN2DT
+	T"><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"><U><FONT COLOR="#0066CC" F
+	ACE="Segoe UI">https://meet.ai.home.com/timothy.Smith/YMQN2DTT</FON
+	T></U></SPAN><SPAN LANG="en-gb"></SPAN></A><SPAN LANG="en-gb"></SPAN><SPAN
+	 LANG="en-gb"></SPAN><SPAN LANG="en-gb"><FONT SIZE=1 FACE="Segoe UI">&nbsp
+	\;&nbsp\;</FONT></SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"> </SPA
+	N></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><
+	SPAN LANG="en-gb"></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><A H
+	REF="http://r.office.microsoft.com/r/rlidOC10?clid=1033&amp\;p1=4&amp\;p2=
+	1041&amp\;pc=oc&amp\;ver=4&amp\;subver=0&amp\;bld=7185&amp\;bldver=0"><SPA
+	N LANG="en-gb"></SPAN><SPAN LANG="en-gb"><U><FONT COLOR="#0066CC" FACE="Se
+	goe UI">First online meeting?</FONT></U></SPAN><SPAN LANG="en-gb"></SPAN><
+	/A><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb">
+	<FONT SIZE=1 FACE="Segoe UI"></FONT></SPAN><SPAN LANG="en-gb"></SPAN><SPAN
+	 LANG="en-gb"></SPAN><SPAN LANG="en-gb"> </SPAN></P>\n\n<P DIR=LTR><SPAN L
+	ANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"><SUB><FONT
+	 COLOR="#FFFFFF" SIZE=1 FACE="Segoe UI">[!OC([1033])!]</FONT></SUB></SPAN>
+	<SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></S
+	PAN></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN
+	><SPAN LANG="en-gb"><FONT COLOR="#404040" SIZE=1 FACE="Segoe UI">.........
+	..........................................................................
+	......................................................</FONT></SPAN><SPAN 
+	LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN></
+	P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN></P>\n\n</BODY>\n</HTML>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-CONFTYPE:0
+END:VEVENT
+BEGIN:VEVENT
+ATTENDEE;CN="Abbott, Paul (UK London)";RSVP=TRUE;PARTSTAT=ACCEPTED:mailt
+	o:paul.h.abbott@home.com
+ATTENDEE;CN="Flatt, Andy (UK London)";RSVP=TRUE:mailto:andy.flatt@home
+	tems.com
+ATTENDEE;CN="Thomas, Stephen (UK London)";RSVP=TRUE:mailto:stephen.thoma
+	s3@home.com
+ATTENDEE;CN="Kirrage, James (UK London)";RSVP=TRUE:mailto:james.kirrage@
+	home.com
+ATTENDEE;CN="Kerr, Connor (UK London)";RSVP=TRUE:mailto:connor.kerr@s
+	ystems.com
+ATTENDEE;CN="Yeates, Darren (UK London)";RSVP=TRUE:mailto:darren.yeates2
+	@home.com
+ATTENDEE;CN="Whitlow, Michael (UK London)";RSVP=TRUE:mailto:michael.whitlow
+	@home.com
+ATTENDEE;CN="Alexander, Marwen (UK London)";RSVP=TRUE:mailto:marwen.alex
+	ander@home.com
+ATTENDEE;CN="Nelmes, Jez (UK Gloucester)";RSVP=TRUE:mailto:jez.nelmes@sy
+	stems.com
+ATTENDEE;CN="Sinnott, Aiden (UK London)";RSVP=TRUE:mailto:aiden.sinnott@
+	home.com
+ATTENDEE;CN="Poole, Chris (UK Gloucester)";RSVP=TRUE:mailto:chris.poole2@
+	systems.com
+ATTENDEE;CN="Lewsey, John (UK Gloucester)";RSVP=TRUE:mailto:john.lewsey@
+	systems.com
+ATTENDEE;CN="Bishop, Helena (UK London)";RSVP=TRUE:mailto:Helena.Bishop@
+	systems.com
+ATTENDEE;CN="King, Paul (UK Gloucester)";RSVP=TRUE:mailto:paul.w.king@sy
+	stems.com
+ATTENDEE;CN="Millar, Duncan (UK London)";RSVP=TRUE:mailto:duncan.millar@
+	systems.com
+ATTENDEE;CN="Hansen, Line (China Bridge)";RSVP=TRUE:mailto:line.hansen@
+	systems.com
+ATTENDEE;CN="Brown, Peter (UK London)";RSVP=TRUE:mailto:peter.brown7@home
+	tems.com
+ATTENDEE;CN="Duncan Millar";RSVP=TRUE:mailto:cube33@me.com
+ATTENDEE;CN="Roast, Dave (UK London)";RSVP=TRUE:mailto:dave.roast@home
+	.com
+ATTENDEE;CN="Jenkins, Mark (UK London)";ROLE=OPT-PARTICIPANT;RSVP=TRUE:m
+	ailto:mark.jenkins4@home.com
+ATTENDEE;CN="Krogh, Jesper (China Bridge)";ROLE=OPT-PARTICIPANT;RSVP=TRU
+	E:mailto:jesper.krogh@home.com
+ATTENDEE;CN="McMeekin, Christopher (UK London)";ROLE=OPT-PARTICIPANT;RSVP=T
+	RUE:mailto:christopher.mcmeekin@home.com
+ATTENDEE;CN="Maher, Raju (UK London)";ROLE=OPT-PARTICIPANT;RSVP=TRUE:mai
+	lto:raju.maher@home.com
+ATTENDEE;CN="Holm Christiansen, Lars (IR Bridge)";ROLE=OPT-PARTICIPANT;RSV
+	P=TRUE:mailto:lars.holm@home.com
+ATTENDEE;CN="Justesen, Michael (China Bridge)";ROLE=OPT-PARTICIPANT;RSVP
+	=TRUE:mailto:michael.justesen@home.com
+ATTENDEE;CN="Hurst, Frank (UK London)";ROLE=OPT-PARTICIPANT;RSVP=TRUE:mai
+	lto:allan.hunt@home.com
+ATTENDEE;CN="Gibbs, Guy (UK London)";ROLE=OPT-PARTICIPANT;RSVP=TRUE:mailto:
+	guy.gibbs@home.com
+ATTENDEE;CN="Jdali, Suki (UK London)";RSVP=TRUE:mailto:suki.jdali@home
+	s.com
+ATTENDEE;CN="Bahrain, Putri (UK London)";ROLE=OPT-PARTICIPANT;RSVP=TRUE:
+	mailto:Putri.Bahrain@home.com
+ATTENDEE;CN="Smallbone, Daniel (UK London)";ROLE=OPT-PARTICIPANT;RSVP=TR
+	UE:mailto:daniel.smallbone@home.com
+ATTENDEE;CN="Clarke, Ed (UK London)";RSVP=TRUE:mailto:ed.clarke2@home
+	ems.com
+ATTENDEE;CN="Russell, Andrew (UK London)";ROLE=OPT-PARTICIPANT;RSVP=TRUE
+	:mailto:Andrew.Russell4@home.com
+CLASS:PUBLIC
+CREATED:20160128T203832Z
+DESCRIPTION:-----Original Appointment-----\nFrom: Smith\, Timothy (UK Guil
+	dford)\nSent: 12 June 2015 10:34\nTo: Smith\, Timothy (UK London)\; Fl
+	att\, Andy (UK London)\; Thomas\, Stephen (UK London)\; Kirrage\, Ja
+	mes (UK London)\; Kerr\, Connor (UK London)\; Yeates\, Darren (UK Gu
+	ildford)\; Whitlow\, Michael (UK London)\; Alexander\, Marwen (UK Guildfor
+	d)\; Nelmes\, Jez (UK Gloucester)\; Sinnott\, Aiden (UK London)\; Poole
+	\, Chris (UK Gloucester)\; Lewsey\, John (UK Gloucester)\; Bishop\, Helena
+	 (UK London)\; King\, Paul (UK Gloucester)\; Millar\, Duncan (UK London)\;
+	 Hansen\, Line (China Bridge)\; Brown\, Peter (UK London)\; Duncan Mill
+	ar\; Roast\, Dave (UK London)\; Jdali\, Suki (UK London)\; Clarke\, Ed (UK
+	 Guildford)\nCc: Jenkins\, Mark (UK London)\; Krogh\, Jesper (China A
+	alborg)\; McMeekin\, Christopher (UK London)\; Maher\, Raju (UK London)
+	\; Holm Christiansen\, Lars (IR Bridge)\; Justesen\, Michael (China Aal
+	borg)\; Hunt\, Allan (UK London)\; Gibbs\, Guy (UK London)\; Bahrain\, 
+	Putri (UK London)\; Smallbone\, Daniel (UK London)\; Russell\, Andre
+	w (UK London)\nSubject: Toolshed Backlog Refinement\nWhen: Occurs eve
+	ry 2 weeks on Tuesday effective 30/06/2015 from 13:00 to 14:00 (UTC) Dubli
+	n\, Edinburgh\, Lisbon\, London.\nWhere: MAxwell Room (Toolshed's Lab)\n
+	\nUpdated to Tuesday to line up with Sprint planning meetings.\n\nUpdated 
+	following Bruno’s resignation\, Note new conference number\n\nDial-in nu
+	mbers:\nUnited Kingdom Freephone : 0800 389 9723\n\nUnited Kingdom Direct:
+	 0203 463 9723   \nChairperson passcode: 43620714 then #  \nParticipant pa
+	sscode: 37461919 then #  \n\n\n
+DTEND;TZID="GMT Standard Time":20160419T140000
+DTSTAMP:20151112T080939Z
+DTSTART;TZID="GMT Standard Time":20160419T130000
+LAST-MODIFIED:20160128T203832Z
+LOCATION:MAxwell Room (Toolshed's Lab)
+ORGANIZER;CN="Smith, Timothy (UK London)":mailto:timothy.Smith@home
+	ems.com
+PRIORITY:5
+RRULE:FREQ=WEEKLY;COUNT=2;INTERVAL=2;BYDAY=TU;WKST=MO
+SEQUENCE:23
+SUMMARY;LANGUAGE=en-gb:FW: Toolshed Backlog Refinement
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000B0CF873AFBA4D001000000000000000
+	010000000EDBA829758400646BCD3B4E1C3B7EEAA
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//E
+	N">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server ve
+	rsion 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n<!-- Converted f
+	rom text/rtf format -->\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><SPAN LANG
+	="en-gb"></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><SPAN LANG="e
+	n-gb"></SPAN><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma">-----Original A
+	ppointment-----<BR>\n</FONT></SPAN><SPAN LANG="en-gb"><B></B></SPAN><SPAN 
+	LANG="en-gb"><B></B></SPAN><B><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma
+	">From:</FONT></SPAN></B><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SP
+	AN><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma"> Smith\, Timothy (UK Gui
+	ldford)<BR>\n</FONT></SPAN><SPAN LANG="en-gb"><B></B></SPAN><SPAN LANG="en
+	-gb"><B></B></SPAN><B><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma">Sent:<
+	/FONT></SPAN></B><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><SPAN
+	 LANG="en-us"><FONT SIZE=2 FACE="Tahoma"> 12 June 2015 10:34<BR>\n</FONT><
+	/SPAN><SPAN LANG="en-gb"><B></B></SPAN><SPAN LANG="en-gb"><B></B></SPAN><B
+	><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma">To:</FONT></SPAN></B><SPAN 
+	LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-us"><FONT SIZ
+	E=2 FACE="Tahoma"> Smith\, Timothy (UK London)\; Flatt\, Andy (UK Guil
+	dford)\; Thomas\, Stephen (UK London)\; Kirrage\, James (UK London)\
+	; Kerr\, Connor (UK London)\; Yeates\, Darren (UK London)\; Whitlow\
+	, Michael (UK London)\; Alexander\, Marwen (UK London)\; Nelmes\, Jez (
+	UK Gloucester)\; Sinnott\, Aiden (UK London)\; Poole\, Chris (UK Glouce
+	ster)\; Lewsey\, John (UK Gloucester)\; Bishop\, Helena (UK London)\; King
+	\, Paul (UK Gloucester)\; Millar\, Duncan (UK London)\; Hansen\, Line (Den
+	mark Bridge)\; Brown\, Peter (UK London)\; Duncan Millar\; Roast\, Dave (
+	UK London)\; Jdali\, Suki (UK London)\; Clarke\, Ed (UK London)<BR>\n</
+	FONT></SPAN><SPAN LANG="en-gb"><B></B></SPAN><SPAN LANG="en-gb"><B></B></S
+	PAN><B><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma">Cc:</FONT></SPAN></B>
+	<SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-us"><FO
+	NT SIZE=2 FACE="Tahoma"> Jenkins\, Mark (UK London)\; Krogh\, Jesper (D
+	enmark Bridge)\; McMeekin\, Christopher (UK London)\; Maher\, Raju (UK Gu
+	ildford)\; Holm Christiansen\, Lars (IR Bridge)\; Justesen\, Michael (Den
+	mark Bridge)\; Hunt\, Allan (UK London)\; Gibbs\, Guy (UK London)\; Ba
+	hrain\, Putri (UK London)\; Smallbone\, Daniel (UK London)\; Russell
+	\, Andrew (UK London)<BR>\n</FONT></SPAN><SPAN LANG="en-gb"><B></B></SP
+	AN><SPAN LANG="en-gb"><B></B></SPAN><B><SPAN LANG="en-us"><FONT SIZE=2 FAC
+	E="Tahoma">Subject:</FONT></SPAN></B><SPAN LANG="en-gb"></SPAN><SPAN LANG=
+	"en-gb"></SPAN><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma"> Toolshed B
+	acklog Refinement<BR>\n</FONT></SPAN><SPAN LANG="en-gb"><B></B></SPAN><SPA
+	N LANG="en-gb"><B></B></SPAN><B><SPAN LANG="en-us"><FONT SIZE=2 FACE="Taho
+	ma">When:</FONT></SPAN></B><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></
+	SPAN><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma"> Occurs every 2 weeks o
+	n Tuesday effective 30/06/2015 from 13:00 to 14:00 (UTC) Dublin\, Edinburg
+	h\, Lisbon\, London.<BR>\n</FONT></SPAN><SPAN LANG="en-gb"><B></B></SPAN><
+	SPAN LANG="en-gb"><B></B></SPAN><B><SPAN LANG="en-us"><FONT SIZE=2 FACE="T
+	ahoma">Where:</FONT></SPAN></B><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb
+	"></SPAN><SPAN LANG="en-us"><FONT SIZE=2 FACE="Tahoma"> MAxwell Room (Heis
+	enberg's Lab)</FONT></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN></
+	P>\n\n<P DIR=LTR><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"><FONT FACE="
+	Calibri">Updated to Tuesday to line up with Sprint planning meetings.</FON
+	T></SPAN></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"><FONT FACE="Calibri">Update
+	d following Bruno’s resignation\, Note new conference number</FONT></SPA
+	N></P>\n\n<P DIR=LTR><SPAN LANG="en-gb"><B></B></SPAN><SPAN LANG="en-gb"><
+	B></B></SPAN><B><SPAN LANG="en-gb"><FONT COLOR="#55379B" FACE="Verdana">Di
+	al-in numbers:</FONT></SPAN></B><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-g
+	b"></SPAN><SPAN LANG="en-gb"><BR>\n</SPAN><SPAN LANG="en-gb"></SPAN><SPAN 
+	LANG="en-gb"></SPAN><SPAN LANG="en-gb"><FONT COLOR="#666666" SIZE=2 FACE="
+	Verdana">United Kingdom Freephone</FONT></SPAN><SPAN LANG="en-gb"></SPAN><
+	SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"> <FONT COLOR="#666666" SIZE=2 
+	FACE="Verdana">: 0800 389 9723</FONT></SPAN></P>\n\n<P DIR=LTR><SPAN LANG=
+	"en-gb"><FONT COLOR="#666666" SIZE=2 FACE="Verdana">United Kingdom Direct:
+	 0203 463 9723 &nbsp\;&nbsp\;</FONT></SPAN><SPAN LANG="en-gb"></SPAN><SPAN
+	 LANG="en-gb"><BR>\n</SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG="en-gb"></
+	SPAN><SPAN LANG="en-gb"><FONT COLOR="#666666" SIZE=2 FACE="Verdana">Chairp
+	erson passcode: 43620714 then # &nbsp\;</FONT></SPAN><SPAN LANG="en-gb"></
+	SPAN><SPAN LANG="en-gb"><BR>\n</SPAN><SPAN LANG="en-gb"></SPAN><SPAN LANG=
+	"en-gb"></SPAN><SPAN LANG="en-gb"><FONT COLOR="#666666" SIZE=2 FACE="Verda
+	na">Participant passcode: 37461919 then # &nbsp\;</FONT></SPAN><SPAN LANG=
+	"en-gb"></SPAN><SPAN LANG="en-gb"><BR>\n</SPAN><SPAN LANG="en-gb"></SPAN><
+	SPAN LANG="en-gb"></SPAN></P>\n\n</BODY>\n</HTML>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-APPTSEQTIME:20150807T144345Z
+X-MS-OLK-CONFTYPE:0
+END:VEVENT
+END:VCALENDAR
