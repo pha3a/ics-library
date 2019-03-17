@@ -1,15 +1,13 @@
 package pha.ics.values;
 
 import org.junit.Test;
-import pha.ics.PropertyParameter;
 import pha.ics.io.read.DurationBuilder;
 import sun.util.calendar.ZoneInfo;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.TimeZone;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by paul on 22/07/16.
@@ -17,7 +15,7 @@ import static org.junit.Assert.*;
 public class DateObjectTest {
 
     @Test
-    public void parseDateWithColon() throws Exception {
+    public void parseDateWithColon() {
 
         String dateTime = "00:20091019T101030";
 

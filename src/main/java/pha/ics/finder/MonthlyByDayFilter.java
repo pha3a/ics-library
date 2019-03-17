@@ -1,8 +1,8 @@
 package pha.ics.finder;
 
+import pha.ics.WeekDay;
 import pha.ics.values.DateObject;
 import pha.ics.values.OrdinalDay;
-import pha.ics.WeekDay;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 public class MonthlyByDayFilter implements Filter {
 
     private final Filter source;
-    private final List<WeekDay> allowedDays = new ArrayList<WeekDay>();
+    private final List<WeekDay> allowedDays = new ArrayList<>();
 
     public MonthlyByDayFilter(Filter source, List<OrdinalDay> days) {
         this.source = source;

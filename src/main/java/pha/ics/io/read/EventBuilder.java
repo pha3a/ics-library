@@ -1,10 +1,13 @@
 package pha.ics.io.read;
 
-import pha.ics.*;
+import pha.ics.Event;
+import pha.ics.FieldName;
+import pha.ics.PropertyParameter;
 import pha.ics.values.*;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static pha.ics.FieldName.BEGIN;
 

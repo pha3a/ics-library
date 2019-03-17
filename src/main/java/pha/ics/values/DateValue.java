@@ -1,6 +1,5 @@
 package pha.ics.values;
 
-import org.jetbrains.annotations.Nullable;
 import pha.ics.PropertyParameter;
 import sun.util.calendar.ZoneInfo;
 
@@ -49,7 +48,7 @@ public class DateValue extends AbstractDateValue {
     /**
      * Create a new DateValue with date and time of now.
      *
-     * @return
+     * @return DateValue of now
      */
     public static DateValue now() {
         return new DateValue(new Date());

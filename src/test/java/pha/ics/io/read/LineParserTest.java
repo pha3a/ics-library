@@ -1,8 +1,6 @@
 package pha.ics.io.read;
 
 import org.junit.Test;
-import pha.ics.io.read.Line;
-import pha.ics.io.read.LineParser;
 
 import java.util.ArrayList;
 import java.util.List;

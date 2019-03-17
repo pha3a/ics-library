@@ -1,6 +1,5 @@
 package pha.ics.io.write;
 
-import org.jetbrains.annotations.NotNull;
 import pha.ics.WeekDay;
 import pha.ics.values.DateObject;
 import pha.ics.values.RepeatRule;
@@ -8,7 +7,6 @@ import pha.ics.values.RepeatRule;
 import java.util.List;
 
 import static pha.ics.values.RepeatRule.Key.*;
-import static pha.ics.values.RepeatRule.Key.WKST;
 
 /**
  * Format a supplied repeat rule suitable for writing to a ICS file.

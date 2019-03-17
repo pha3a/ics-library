@@ -69,7 +69,7 @@ class LineParser {
      */
     @NotNull
     private static List<String> splitParams(String paramString, int startPos, int endPos, List<Region> regions) {
-        List<String> params = new ArrayList<String>();
+        List<String> params = new ArrayList<>();
         int start = startPos;
         int semiPosition = find(';', paramString, regions, start);
         while (haveSemicolonAt(semiPosition) && semiPosition < endPos) {
@@ -122,7 +122,7 @@ class LineParser {
     }
 
     private static List<Region> getQuoteRegions(char[] chars) {
-        List<Region> regions = new ArrayList<Region>();
+        List<Region> regions = new ArrayList<>();
 
         // Find the quote regions
         int start = -1;

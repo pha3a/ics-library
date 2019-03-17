@@ -6,8 +6,9 @@ import pha.ics.WeekDay;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Represents a date or date-time pair which can be incorporated in either a

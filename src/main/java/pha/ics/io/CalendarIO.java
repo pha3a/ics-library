@@ -1,9 +1,8 @@
 package pha.ics.io;
 
 import org.jetbrains.annotations.Nullable;
-
-import pha.ics.*;
 import pha.ics.Calendar;
+import pha.ics.Event;
 import pha.ics.io.read.CalendarReader;
 import pha.ics.io.write.CalendarWriter;
 import pha.ics.values.DateValue;
@@ -113,7 +112,7 @@ public class CalendarIO {
      * @return a sorted copy of the events parameter
      */
     private static List<Event> sortByTime(List<Event> events) {
-        List<Event> sorted = new ArrayList<Event>(events);
+        List<Event> sorted = new ArrayList<>(events);
         Collections.sort(sorted, new Comparator<Event>() {
             public int compare(Event event, Event event2) {
                 DateValue startDate1 = event.getDTStart();

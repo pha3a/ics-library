@@ -2,7 +2,6 @@ package pha.ics.io.read;
 
 import pha.ics.PropertyParameter;
 import pha.ics.values.RepeatRule;
-import pha.ics.values.Value;
 
 import java.util.HashMap;
 import java.util.List;

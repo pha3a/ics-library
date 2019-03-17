@@ -14,7 +14,7 @@ import java.util.List;
  */
 public abstract class AbstractValue implements Value {
 
-    private final List<PropertyParameter> parameters = new ArrayList<PropertyParameter>();
+    private final List<PropertyParameter> parameters = new ArrayList<>();
 
     protected AbstractValue(List<PropertyParameter> params) {
         if (params != null) {

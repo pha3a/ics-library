@@ -19,7 +19,7 @@ abstract class AbstractDateValue extends AbstractValue implements TimeZoneProvid
         super(parameters);
     }
 
-    protected AbstractDateValue() {
+    AbstractDateValue() {
     }
 
     @Override
@@ -70,8 +70,8 @@ abstract class AbstractDateValue extends AbstractValue implements TimeZoneProvid
     /**
      * Equals ignoring time zones.
      *
-     * @param o
-     * @return
+     * @param o to compare with
+     * @return true if this equals o
      */
     @Override
     public boolean equals(Object o) {

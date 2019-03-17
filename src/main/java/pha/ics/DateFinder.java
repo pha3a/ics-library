@@ -4,6 +4,52 @@ import org.jetbrains.annotations.NotNull;
 import pha.ics.finder.*;
 import pha.ics.values.*;
 
+interface End {
+    /**
+     * Check if the end has been reached.
+     *
+     * @param currentDate used by some tests
+     * @return true if the end condition has been met.
+     */
+    boolean reached(DateObject currentDate);
+}
+
+class CountEnd implements End {
+
+    private int countLeft;
+
+    CountEnd(int i) {
+        countLeft = i;
+    }
+
+    @Override
+    public boolean reached(DateObject currentDate) {
+        return countLeft-- == 0;
+    }
+}
+
+class UntilEnd implements End {
+
+    private DateObject endDate;
+
+    UntilEnd(DateObject until) {
+
+        endDate = until;
+    }
+
+    @Override
+    public boolean reached(DateObject currentDate) {
+        return currentDate.isAfter(endDate);
+    }
+}
+
+class InfiniteEnd implements End {
+
+    @Override
+    public boolean reached(DateObject currentDate) {
+        return false;
+    }
+}
 /**
  * Base class holding builder method used to create a date finder used to find a single date
  * in an event as specified by a start date, repeat rule and exclude list.
@@ -20,7 +66,12 @@ public abstract class DateFinder {
     private final DateObject startDate;
 
     protected DateObject currentDate;
-    private int countLeft;
+//    private int countLeft;
+
+    /**
+     * End criteria, used to determine if the repeating rule end has been reached.
+     */
+    private End end;
 
     public static DateFinder build(DateValue start, @NotNull RepeatRule repeatRule, DateList exclude) {
         Frequency frequency = repeatRule.getFrequency();
@@ -63,9 +114,8 @@ public abstract class DateFinder {
 
         initialise();
 
-        while (currentDate.isBefore(dateToFind) && countLeft > 0) {
+        while (currentDate.isBefore(dateToFind) && !end.reached(currentDate)) {
             moveToNextDate();
-            countLeft--;
         }
         return currentDate.equals(dateToFind);
 
@@ -73,7 +123,13 @@ public abstract class DateFinder {
 
     protected void initialise() {
 
-        countLeft = repeatRule.getCount() > 0 ? repeatRule.getCount() - 1 : Integer.MAX_VALUE;
+        if (repeatRule.hasCount()) {
+            end = new CountEnd(repeatRule.getCount() - 1);
+        } else if (repeatRule.hasUntil()) {
+            end = new UntilEnd(repeatRule.getUntil());
+        } else {
+            end = new InfiniteEnd();
+        }
         currentDate = startDate;
     }
 

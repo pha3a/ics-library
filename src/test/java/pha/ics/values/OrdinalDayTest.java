@@ -1,7 +1,6 @@
 package pha.ics.values;
 
 import junit.framework.TestCase;
-import pha.ics.values.OrdinalDay;
 
 public class OrdinalDayTest extends TestCase {
 

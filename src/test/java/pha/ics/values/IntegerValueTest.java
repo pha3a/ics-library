@@ -8,28 +8,28 @@ import java.util.List;
 
 public class IntegerValueTest extends TestCase {
 
-    public void testEqualsOnSimilarValues() throws Exception {
+    public void testEqualsOnSimilarValues()  {
         IntegerValue integerValue1 = new IntegerValue("4", null);
         IntegerValue integerValue2 = new IntegerValue("4", null);
 
         assertTrue("Values not equal", integerValue1.equals(integerValue2));
     }
 
-    public void testEqualsOnDifferentValues() throws Exception {
+    public void testEqualsOnDifferentValues()  {
         IntegerValue integerValue1 = new IntegerValue("4", null);
         IntegerValue integerValue2 = new IntegerValue("40", null);
 
         assertFalse("Values should not be equal", integerValue1.equals(integerValue2));
     }
 
-    public void testEqualsOnDifferentTypes() throws Exception {
+    public void testEqualsOnDifferentTypes()  {
         Value integerValue1 = new IntegerValue("4", null);
         Value integerValue2 = new StringValue("4", null);
 
         assertFalse("Values should not be equal", integerValue1.equals(integerValue2));
     }
 
-    public void testToFormattedString() throws Exception {
+    public void testToFormattedString()  {
         IntegerValue integerValue1 = new IntegerValue("43", null);
 
         String formattedString = integerValue1.getValueAsString();
@@ -37,13 +37,13 @@ public class IntegerValueTest extends TestCase {
         assertEquals("Incorrect format", "43", formattedString);
     }
 
-    public void testCompareTo() throws Exception {
+    public void testCompareTo()  {
         IntegerValue integerValue1 = new IntegerValue("4", null);
         IntegerValue integerValue2 = new IntegerValue("43", null);
         IntegerValue integerValue3 = new IntegerValue("3", null);
         IntegerValue integerValue4 = new IntegerValue("73", null);
 
-        List<Value> list = new ArrayList<Value>();
+        List<Value> list = new ArrayList<>();
 
         list.add(integerValue1);
         list.add(integerValue2);

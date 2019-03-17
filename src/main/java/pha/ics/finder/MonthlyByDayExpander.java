@@ -1,8 +1,8 @@
 package pha.ics.finder;
 
+import pha.ics.WeekDay;
 import pha.ics.values.DateObject;
 import pha.ics.values.OrdinalDay;
-import pha.ics.WeekDay;
 
 import java.util.List;
 import java.util.Queue;
@@ -13,7 +13,7 @@ import java.util.concurrent.ArrayBlockingQueue;
  */
 public class MonthlyByDayExpander implements Filter {
 
-    private Queue<OrdinalDay> currentDays = new ArrayBlockingQueue<OrdinalDay>(8);
+    private Queue<OrdinalDay> currentDays = new ArrayBlockingQueue<>(8);
 
     private final Filter source;
     private final List<OrdinalDay> allDays;

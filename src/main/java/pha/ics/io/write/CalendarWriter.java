@@ -1,14 +1,18 @@
 package pha.ics.io.write;
 
-import pha.ics.*;
 import pha.ics.Calendar;
 import pha.ics.TimeZone;
+import pha.ics.*;
 import pha.ics.io.read.Line;
-import pha.ics.io.write.ValueFormatter;
-import pha.ics.io.write.WrapingOutputStream;
-import pha.ics.values.*;
+import pha.ics.values.CompoundValue;
+import pha.ics.values.DateValue;
+import pha.ics.values.StringValue;
+import pha.ics.values.Value;
 
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.FilterOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -25,8 +29,7 @@ public class CalendarWriter {
     public CalendarWriter(FileOutputStream outputStream) {
         FilterOutputStream filterOutputStream = new WrapingOutputStream(outputStream);
 
-        OutputStreamWriter osw = null;
-        osw = new OutputStreamWriter(filterOutputStream, StandardCharsets.UTF_8);
+        OutputStreamWriter osw = new OutputStreamWriter(filterOutputStream, StandardCharsets.UTF_8);
         writer = new PrintWriter(osw);
     }
 
@@ -76,7 +79,8 @@ public class CalendarWriter {
 
     private StringValue getTimeZoneId(TimeZone timeZone) {
         StringValue id = timeZone.getId();
-        if (id.getValue().contains(" ")) {
+        String value = id.getValue();
+        if (value != null && value.contains(" ")) {
             id = new StringValue("\""+ id.getValue() +"\"", id.getParameters());
         }
         return id;
@@ -131,7 +135,7 @@ public class CalendarWriter {
     }
 
     /**
-     * Write a single event to the sriter, including the BEGIN and END lines.
+     * Write a single event to the writer, including the BEGIN and END lines.
      *
      * @param event to writeLine
      */

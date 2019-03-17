@@ -1,9 +1,6 @@
 package pha.ics.values;
 
 import junit.framework.TestCase;
-import pha.ics.values.CompoundValue;
-import pha.ics.values.StringValue;
-import pha.ics.values.Value;
 
 import java.util.List;
 
@@ -12,7 +9,7 @@ import java.util.List;
  */
 public class CompoundValueTest extends TestCase {
 
-    public void testGetValues() throws Exception {
+    public void testGetValues() {
         Value value = new StringValue("XYZ");
         CompoundValue compoundValue = new CompoundValue(value);
 
@@ -26,18 +23,18 @@ public class CompoundValueTest extends TestCase {
         assertEquals("Should have 2 values", 2, returnedValues.size());
     }
 
-    public void testToFormattedString() throws Exception {
+    public void testToFormattedString() {
 
     }
 
-    public void testEqualsOnSame() throws Exception {
+    public void testEqualsOnSame() {
         CompoundValue compoundValue = new CompoundValue(new StringValue("XYZ"));
         compoundValue.add(new StringValue("ABC"));
 
         assertEquals("Should be the same", compoundValue, compoundValue);
     }
 
-    public void testEqualsOnCopy() throws Exception {
+    public void testEqualsOnCopy() {
         CompoundValue compoundValue1 = new CompoundValue(new StringValue("XYZ"));
         compoundValue1.add(new StringValue("ABC"));
 
@@ -47,7 +44,7 @@ public class CompoundValueTest extends TestCase {
         assertEquals("Should be the same", compoundValue1, compoundValue2);
     }
 
-    public void testEqualsOnDiffOrderCopy() throws Exception {
+    public void testEqualsOnDiffOrderCopy()  {
         CompoundValue compoundValue1 = new CompoundValue(new StringValue("XYZ"));
         compoundValue1.add(new StringValue("ABC"));
 
@@ -57,7 +54,7 @@ public class CompoundValueTest extends TestCase {
         assertEquals("Should be the same", compoundValue1, compoundValue2);
     }
 
-    public void testEqualsOnDifferent() throws Exception {
+    public void testEqualsOnDifferent() {
         CompoundValue compoundValue1 = new CompoundValue(new StringValue("XYZ"));
         compoundValue1.add(new StringValue("ABC"));
 
@@ -66,7 +63,7 @@ public class CompoundValueTest extends TestCase {
         assertNotSame("Should not be the same", compoundValue1, compoundValue2);
     }
 
-    public void testAddDuplicateValuesOnlyKeepsOneCopy() throws Exception {
+    public void testAddDuplicateValuesOnlyKeepsOneCopy() {
         CompoundValue compoundValue1 = new CompoundValue(new StringValue("ABC"));
         compoundValue1.add(new StringValue("ABC"));
 

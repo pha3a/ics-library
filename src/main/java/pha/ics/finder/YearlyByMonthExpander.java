@@ -14,7 +14,7 @@ public class YearlyByMonthExpander implements Filter {
     private Filter source;
     private List<Integer> allowedMonths;
 
-    private Queue<Integer> availableMonths = new ArrayBlockingQueue<Integer>(12);
+    private Queue<Integer> availableMonths = new ArrayBlockingQueue<>(12);
 
 
     private YearlyByMonthExpander(Filter nextFilter, List<Integer> allowedMonths) {

@@ -18,7 +18,7 @@ public class SecurityClass extends AbstractValue {
 
     private final String value;
 
-    public SecurityClass(String value) {
+    SecurityClass(String value) {
 
         this.value = value;
     }

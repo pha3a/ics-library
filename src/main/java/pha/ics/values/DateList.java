@@ -2,7 +2,6 @@ package pha.ics.values;
 
 import org.jetbrains.annotations.Nullable;
 import pha.ics.PropertyParameter;
-import sun.util.calendar.ZoneInfo;
 
 import java.util.*;
 
@@ -14,7 +13,7 @@ import java.util.*;
  */
 public class DateList extends AbstractDateValue {
 
-    private List<DateObject> dateList = new ArrayList<DateObject>();
+    private List<DateObject> dateList = new ArrayList<>();
 
     private Comparator<DateObject> comparator = new Comparator<DateObject>() {
         @Override

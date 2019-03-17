@@ -8,6 +8,7 @@
     <name>ICS Library Management</name>
     <groupId>pha.ics-library</groupId>
     <description>
+        V1.32 (17/03/2019) add support for repeat until to date finder
         V1.31 (09/06/2018) add daylight time flag to DateValue
         V1.30 (15/04/2018) fix bug in add method of DateObject, lost timezone
         V1.29 (02/04/2018) upgrade date finder to cope with week numbers
@@ -30,7 +31,7 @@
         V1.12 minor updates to value fields + full Duration support
         V1.1 adds support for timezones
     </description>
-    <version>1.31</version>
+    <version>1.32</version>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>

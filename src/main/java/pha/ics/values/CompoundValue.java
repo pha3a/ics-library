@@ -4,7 +4,6 @@ import org.jetbrains.annotations.Nullable;
 import pha.ics.PropertyParameter;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

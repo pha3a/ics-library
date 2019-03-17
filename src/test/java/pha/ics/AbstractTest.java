@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class AbstractTest {
 
-    protected RepeatRule createRepeatRule(String value) {
+    RepeatRule createRepeatRule(String value) {
         return createRepeatRule(value, null);
     }
 

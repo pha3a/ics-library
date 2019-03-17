@@ -19,7 +19,7 @@ public class TimeZone {
     /**
      * Timezone types, either standard or daylight
      */
-    private final Map<String, Type> types = new HashMap<String, Type>();
+    private final Map<String, Type> types = new HashMap<>();
 
     /**
      * Unique id for this time zone, a time zone will be referenced by this name.
@@ -58,7 +58,7 @@ public class TimeZone {
     }
 
     public static class Type {
-        private final Map<FieldName, Value> fields = new HashMap<FieldName, Value>();
+        private final Map<FieldName, Value> fields = new HashMap<>();
 
         public void addField(FieldName fieldName, Value value) {
             fields.put(fieldName, value);

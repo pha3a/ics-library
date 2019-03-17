@@ -1,13 +1,10 @@
 package pha.ics.io.read;
 
 import junit.framework.TestCase;
-import pha.ics.io.read.Line;
-import pha.ics.io.read.LineReader;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
 
-import static org.junit.Assert.assertEquals;
 import static pha.ics.FieldName.STATUS;
 import static pha.ics.FieldName.SUMMARY;
 

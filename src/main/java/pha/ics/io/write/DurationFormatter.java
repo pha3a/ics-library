@@ -25,12 +25,12 @@ class DurationFormatter {
             builder.append("0D");
         }
         if (duration.getWeeks() > 0) {
-             builder.append(Integer.toString(duration.getWeeks())).append("W");
+             builder.append(duration.getWeeks()).append("W");
         } else {
 
             int days = duration.getDays();
             if (days > 0) {
-                builder.append(Integer.toString(days)).append("D");
+                builder.append(days).append("D");
             }
             builder.append("T");
 
@@ -39,14 +39,14 @@ class DurationFormatter {
             int seconds = duration.getSeconds();
 
             if (hours > 0) {
-                builder.append(Integer.toString(hours)).append("H");
-                builder.append(Integer.toString(minutes)).append("M");
-                builder.append(Integer.toString(seconds)).append("S");
+                builder.append(hours).append("H");
+                builder.append(minutes).append("M");
+                builder.append(seconds).append("S");
             } else if (minutes > 0) {
-                builder.append(Integer.toString(minutes)).append("M");
-                builder.append(Integer.toString(seconds)).append("S");
+                builder.append(minutes).append("M");
+                builder.append(seconds).append("S");
             } else {
-                builder.append(Integer.toString(seconds)).append("S");
+                builder.append(seconds).append("S");
             }
         }
 

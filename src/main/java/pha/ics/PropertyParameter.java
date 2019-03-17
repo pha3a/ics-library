@@ -30,11 +30,7 @@ public class PropertyParameter {
         if (!name.equals(that.name)) {
             return false;
         }
-        if (value != null ? !value.equals(that.value) : that.value != null) {
-            return false;
-        }
-
-        return true;
+        return value != null ? value.equals(that.value) : that.value == null;
     }
 
     @Override

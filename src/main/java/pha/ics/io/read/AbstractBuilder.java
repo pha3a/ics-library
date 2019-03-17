@@ -10,9 +10,9 @@ import java.util.List;
  *
  * Created by paul on 24/07/16.
  */
-public class AbstractBuilder {
+class AbstractBuilder {
 
-    protected static List<PropertyParameter> parseParameters(List<String> params) {
+    static List<PropertyParameter> parseParameters(List<String> params) {
 
         List<PropertyParameter> result = new ArrayList<>();
 

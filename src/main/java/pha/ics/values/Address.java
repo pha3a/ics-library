@@ -31,9 +31,9 @@ public class Address extends AbstractValue {
     }
 
     /**
-     * Try and extract the true address name from the value. Removign any "mailto" or "CN=" from it.
+     * Try and extract the true address name from the value. Removing any "mailto" or "CN=" from it.
      *
-     * @return
+     * @return the name from this address
      */
     public String getName() {
         if (value.toLowerCase().startsWith("mailto:")) {
@@ -97,15 +97,11 @@ public class Address extends AbstractValue {
     /**
      * Does the string value start with the specified characters.
      *
-     * @param charactersToFind
+     * @param charactersToFind in value
      * @return true if this is not null and starts with charactersToFind.
      */
     public boolean startsWith(String charactersToFind) {
         return value != null && value.startsWith(charactersToFind);
     }
 
-//    public boolean startsWith(Address stringValue) {
-//        return stringValue != null && stringValue.getFieldValue() != null && startsWith(stringValue
-//                .getFieldValue());
-//    }
 }

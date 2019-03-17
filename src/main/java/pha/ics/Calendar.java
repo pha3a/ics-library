@@ -21,7 +21,7 @@ public class Calendar {
     /**
      * List of events in this calendar, order is not guaranteed.
      */
-    private final List<Event> events = new ArrayList<Event>();
+    private final List<Event> events = new ArrayList<>();
 
     /**
      * Defined timezones used in this claendar's events
@@ -114,7 +114,7 @@ public class Calendar {
     }
 
     @NotNull public List<Event> cloneEvents() {
-        return new ArrayList<Event>(events);
+        return new ArrayList<>(events);
     }
 
 

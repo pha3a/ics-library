@@ -34,7 +34,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -54,7 +54,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should match repreat rule", contains);
+        assertFalse("Date should match repeat rule", contains);
 
     }
 
@@ -73,7 +73,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should match repreat rule", contains);
+        assertFalse("Date should match repeat rule", contains);
 
     }
 
@@ -92,7 +92,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -111,7 +111,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -131,7 +131,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -151,7 +151,47 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
+
+    }
+
+    @Test
+    public void testWeeklyFindMatchesWithDayAndRepeatWithNoEnd() {
+        List<PropertyParameter> params = new ArrayList<>();
+
+        String value = "FREQ=WEEKLY;INTERVAL=4";
+        RepeatRule ruleToTest = createRepeatRule(value, params);
+
+        String startDate = "20130803T100000Z";
+        DateValue start = new DateValue(startDate, params);
+
+        String dateTime = "20130928T100000Z";
+        DateValue dateToMatch = new DateValue(dateTime, params);
+
+        DateFinder finder = DateFinder.build(start, ruleToTest, null);
+        boolean contains = finder.find(dateToMatch);
+
+        assertTrue("Date should match repeat rule", contains);
+
+    }
+
+    @Test
+    public void testWeeklyFindFailsWhenUntilBeforeDateToFind() {
+        List<PropertyParameter> params = new ArrayList<>();
+
+        String value = "FREQ=WEEKLY;UNTIL=20180824";
+        RepeatRule ruleToTest = createRepeatRule(value, params);
+
+        String startDate = "20180803T100000Z";
+        DateValue start = new DateValue(startDate, params);
+
+        String dateTime = "20180907T100000Z";
+        DateValue dateToMatch = new DateValue(dateTime, params);
+
+        DateFinder finder = DateFinder.build(start, ruleToTest, null);
+        boolean contains = finder.find(dateToMatch);
+
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -171,7 +211,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -191,7 +231,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -211,7 +251,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -231,7 +271,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -251,7 +291,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -271,7 +311,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -293,7 +333,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -313,7 +353,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should match repreat rule", contains);
+        assertFalse("Date should match repeat rule", contains);
 
     }
 
@@ -333,7 +373,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should match repreat rule", contains);
+        assertFalse("Date should match repeat rule", contains);
 
     }
 
@@ -353,7 +393,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -373,7 +413,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -393,7 +433,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -413,7 +453,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -433,7 +473,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -453,7 +493,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -473,7 +513,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -493,7 +533,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -513,7 +553,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertFalse("Date should NOT match repreat rule", contains);
+        assertFalse("Date should NOT match repeat rule", contains);
 
     }
 
@@ -533,7 +573,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 
@@ -553,7 +593,7 @@ public class DateFinderTest extends AbstractTest {
         DateFinder finder = DateFinder.build(start, ruleToTest, null);
         boolean contains = finder.find(dateToMatch);
 
-        assertTrue("Date should match repreat rule", contains);
+        assertTrue("Date should match repeat rule", contains);
 
     }
 }

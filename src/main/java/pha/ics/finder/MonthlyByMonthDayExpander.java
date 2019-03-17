@@ -10,14 +10,14 @@ import java.util.concurrent.ArrayBlockingQueue;
 /**
  * Created by paul on 23/10/15.
  */
-public class MonthlyByMonthDayExpender implements Filter {
+public class MonthlyByMonthDayExpander implements Filter {
 
-    private Queue<DateObject> availableDays = new ArrayBlockingQueue<DateObject>(31);
+    private Queue<DateObject> availableDays = new ArrayBlockingQueue<>(31);
 
     private Filter source;
     private List<Integer> allowableDays;
 
-    public MonthlyByMonthDayExpender(Filter dateSource, List<Integer> monthDays) {
+    public MonthlyByMonthDayExpander(Filter dateSource, List<Integer> monthDays) {
         this.source = dateSource;
         this.allowableDays = monthDays;
     }

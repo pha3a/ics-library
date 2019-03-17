@@ -204,7 +204,7 @@ public class RepeatRule extends AbstractValue {
 
     private List<Integer> convertArray(String valueAsString) {
         String[] splitValue = valueAsString.split(",");
-        List<Integer> intValues = new ArrayList<Integer>(splitValue.length);
+        List<Integer> intValues = new ArrayList<>(splitValue.length);
         for (String str : splitValue) {
             intValues.add(Integer.parseInt(str));
         }
@@ -216,11 +216,11 @@ public class RepeatRule extends AbstractValue {
      * Split the given string at the commas and convert the elements into number,name pairs.
      *
      * @param valueAsString to split
-     * @return
+     * @return list of ordinal days
      */
     private List<OrdinalDay> convertOrdArray(String valueAsString) {
         String[] splitValue = valueAsString.split(",");
-        List<OrdinalDay> ordinalDays = new ArrayList<OrdinalDay>(splitValue.length);
+        List<OrdinalDay> ordinalDays = new ArrayList<>(splitValue.length);
         for (String str : splitValue) {
             ordinalDays.add(new OrdinalDay(str));
         }
@@ -247,7 +247,7 @@ public class RepeatRule extends AbstractValue {
     /**
      * Return the rule interval, defaults to 1 if not found.
      *
-     * @return
+     * @return interval
      */
     public int getInterval() {
 

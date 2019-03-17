@@ -19,14 +19,14 @@ public class Event {
     private final Map<FieldName, Value> fields = new LinkedHashMap<>();
 
     /**
-     * Parent event, normally used for exclusions to a repeating event.
+     * Parent event, used where this is an exclusion to a repeating parent event.
      */
     private Event parentEvent;
 
     /**
-     * Child events, normmaly used for exclusions to aa repeating event.
+     * Child events, normally used for exclusions to a repeating event.
      */
-    private Set<Event> childEvents = new HashSet<>();
+    private final Set<Event> childEvents = new HashSet<>();
 
     @Override
     public boolean equals(Object obj) {
@@ -136,7 +136,8 @@ public class Event {
 
         return repeatRule != null && repeatRule.isMonthly();
     }
-    public boolean isRepeatingDayly() {
+
+    public boolean isRepeatingDaily() {
         RepeatRule repeatRule = getRepeatRule();
 
         return repeatRule != null && repeatRule.isDaily();
@@ -223,6 +224,11 @@ public class Event {
         return false;
     }
 
+    /**
+     * If this is a delete or cancel event that relates to a repeating event. Then the parent is the repeating event.
+     *
+     * @param event Repeating event this relates to.
+     */
     public void setParent(Event event) {
 
         if (parentEvent != null) {
@@ -442,16 +448,26 @@ public class Event {
     /**
      * Does this event have attendees?
      *
-     * @return true if the ATTENDEE name is present.
+     * @return true if the ATTENDEE field is present.
      */
     public boolean hasAttendees() {
         return fields.containsKey(FieldName.ATTENDEE);
     }
 
+    /**
+     * Return the Parent event, which will be the repeating event this is an exclusion of.
+     *
+     * @return the parent event
+     */
     public Event getParentEvent() {
         return parentEvent;
     }
 
+    /**
+     * Return the child events that represent exclusions to this repreting event.
+     *
+     * @return a set of events
+     */
     public Set<Event> getChildEvents() {
         return childEvents;
     }

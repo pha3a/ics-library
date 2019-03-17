@@ -1,14 +1,12 @@
 package pha.ics.io.read;
 
 import org.junit.Test;
-import pha.ics.io.read.Line;
-import pha.ics.io.read.LineReader;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.StringReader;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static pha.ics.FieldName.*;
 
 public class LineReaderAppgenixTest {
@@ -16,10 +14,10 @@ public class LineReaderAppgenixTest {
     /**
      * Test that a single line is read.
      *
-     * @throws Exception
+     * @throws IOException if error reading line
      */
     @Test
-    public void testReadLineWithSingleLine() throws Exception {
+    public void testReadLineWithSingleLine() throws IOException {
 
         StringReader sr = new StringReader("CLASS:PRIVATE");
         BufferedReader bufferedReader = new BufferedReader(sr);
@@ -37,10 +35,10 @@ public class LineReaderAppgenixTest {
     /**
      * Test that 2 lines can be read.
      *
-     * @throws Exception
+     * @throws IOException if error reading line
      */
     @Test
-    public void testReadLineWithTwoLine2() throws Exception {
+    public void testReadLineWithTwoLine2() throws IOException {
 
         StringReader sr = new StringReader("ORGANIZER:Message\r\nCLASS:PRIVATE");
         BufferedReader bufferedReader = new BufferedReader(sr);
@@ -62,10 +60,10 @@ public class LineReaderAppgenixTest {
     /**
      * Test that 2 lines can be read when the first is wrapped round onto the second line
      *
-     * @throws Exception
+     * @throws IOException if error reading line
      */
     @Test
-    public void testReadLineWithAnExtendedLine() throws Exception {
+    public void testReadLineWithAnExtendedLine() throws IOException {
 
         StringReader sr = new StringReader("ORGANIZER:Message\r\nExtension\r\nDESCRIPTION:Message\r\nExtension\r\nCLASS:PRIVATE");
         BufferedReader bufferedReader = new BufferedReader(sr);
@@ -91,10 +89,10 @@ public class LineReaderAppgenixTest {
     /**
      * Test that an extended line can be read if it is the last line..
      *
-     * @throws Exception
+     * @throws IOException if error reading line
      */
     @Test
-    public void testReadLineWithExtendedLineBeingLast() throws Exception {
+    public void testReadLineWithExtendedLineBeingLast() throws IOException {
 
         StringReader sr = new StringReader("SUMMARY:ONE\r\nDESCRIPTION:20130623T200559Z\r\nExtension\r\n");
         BufferedReader bufferedReader = new BufferedReader(sr);

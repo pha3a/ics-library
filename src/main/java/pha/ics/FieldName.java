@@ -97,7 +97,7 @@ public enum FieldName {
 
     public static List<String> names() {
         if (namesArray == null) {
-            namesArray = new ArrayList<String>();
+            namesArray = new ArrayList<>();
             for (FieldName value : values()) {
                 namesArray.add(value.toString());
             }

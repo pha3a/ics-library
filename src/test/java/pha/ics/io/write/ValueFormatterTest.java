@@ -1,10 +1,9 @@
 package pha.ics.io.write;
 
 import org.junit.Test;
-import pha.ics.io.write.ValueFormatter;
 import pha.ics.values.UTCOffset;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static pha.ics.FieldName.TZOFFSETFROM;
 
 /**
@@ -13,21 +12,21 @@ import static pha.ics.FieldName.TZOFFSETFROM;
 public class ValueFormatterTest {
 
     @Test
-    public void formatPositiveUTCOffset() throws Exception {
+    public void formatPositiveUTCOffset() {
         UTCOffset utcOffset = new UTCOffset("+0500", null);
 
         assertEquals("Incorrect format", "+0500", ValueFormatter.format(TZOFFSETFROM, utcOffset));
     }
 
     @Test
-    public void formatNegativeUTCOffset() throws Exception {
+    public void formatNegativeUTCOffset() {
         UTCOffset utcOffset = new UTCOffset("-0130", null);
 
         assertEquals("Incorrect format", "-0130", ValueFormatter.format(TZOFFSETFROM, utcOffset));
     }
 
     @Test
-    public void formatUTCOffsetWithSeconds() throws Exception {
+    public void formatUTCOffsetWithSeconds() {
         UTCOffset utcOffset = new UTCOffset("+013010", null);
 
         assertEquals("Incorrect format", "+013010", ValueFormatter.format(TZOFFSETFROM, utcOffset));

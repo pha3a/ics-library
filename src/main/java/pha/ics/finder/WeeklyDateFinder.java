@@ -1,6 +1,7 @@
 package pha.ics.finder;
 
-import pha.ics.*;
+import pha.ics.DateFinder;
+import pha.ics.WeekDay;
 import pha.ics.values.DateList;
 import pha.ics.values.DateValue;
 import pha.ics.values.OrdinalDay;

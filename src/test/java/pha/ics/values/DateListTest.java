@@ -6,14 +6,12 @@ import pha.ics.PropertyParameter;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class DateListTest extends AbstractTest {
 
     @Test
-    public void testToFormattedStringWithDateTimeFloating() throws Exception {
+    public void testToFormattedStringWithDateTimeFloating() {
 
         String dateTime = "20111219T140000";
         DateList dateList = new DateList(dateTime, null);
@@ -28,7 +26,7 @@ public class DateListTest extends AbstractTest {
     }
 
     @Test
-    public void testToFormattedStringWithDateTimeUTC() throws Exception {
+    public void testToFormattedStringWithDateTimeUTC() {
 
         String dateTime = "20111219T100030Z";
         DateList dateList = new DateList(dateTime, null);
@@ -40,7 +38,7 @@ public class DateListTest extends AbstractTest {
     }
 
     @Test
-    public void testToFormattedStringWithDayOnly() throws Exception {
+    public void testToFormattedStringWithDayOnly() {
 
         String dateTime = "20001019";
         List<PropertyParameter> params = createParameters("VALUE=DATE");
@@ -55,7 +53,7 @@ public class DateListTest extends AbstractTest {
     }
 
     @Test
-    public void testToFormattedStringThreeDays() throws Exception {
+    public void testToFormattedStringThreeDays() {
 
         String dateTime = "20001019,20120410,20130101";
         List<PropertyParameter> params = createParameters("VALUE=DATE");
@@ -77,7 +75,7 @@ public class DateListTest extends AbstractTest {
     }
 
     @Test
-    public void testToFormattedStringTwoDates() throws Exception {
+    public void testToFormattedStringTwoDates() {
 
         String dateTime = "20111219T100030Z,20111219T100030Z";
         DateList dateList = new DateList(dateTime, null);

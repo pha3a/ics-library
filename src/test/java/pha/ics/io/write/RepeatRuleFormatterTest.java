@@ -4,7 +4,6 @@ import org.junit.Test;
 import pha.ics.AbstractTest;
 import pha.ics.PropertyParameter;
 import pha.ics.WeekDay;
-import pha.ics.io.write.RepeatRuleFormatter;
 import pha.ics.values.DateObject;
 import pha.ics.values.OrdinalDay;
 import pha.ics.values.RepeatRule;

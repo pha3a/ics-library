@@ -6,9 +6,7 @@ import pha.ics.values.RepeatRule;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Created by paul on 17/10/15.
@@ -16,7 +14,7 @@ import static org.junit.Assert.assertTrue;
 public class EventTest extends AbstractTest {
 
     @Test
-    public void testEventIsRepeating() throws Exception {
+    public void testEventIsRepeating() {
         Event event = new Event();
 
         RepeatRule rule = createRepeatRule("FREQ=WEEKLY;INTERVAL=1;BYDAY=MO");
@@ -26,7 +24,7 @@ public class EventTest extends AbstractTest {
     }
 
     @Test
-    public void testEventContainsDate() throws Exception {
+    public void testEventContainsDate() {
         Event event = new Event();
 
         RepeatRule rule = createRepeatRule("FREQ=WEEKLY;INTERVAL=1");
@@ -43,7 +41,7 @@ public class EventTest extends AbstractTest {
     }
 
     @Test
-    public void testAddedCategoryCanBeRetrieved() throws Exception {
+    public void testAddedCategoryCanBeRetrieved() {
         Event event = new Event();
 
         assertTrue("Categories should be empty", event.getCategories().isEmpty());
@@ -61,7 +59,7 @@ public class EventTest extends AbstractTest {
     }
 
     @Test
-    public void testRemovedCategoryNoLongerPresent() throws Exception {
+    public void testRemovedCategoryNoLongerPresent() {
         Event event = new Event();
 
         event.addCategory("CAR");
@@ -88,7 +86,7 @@ public class EventTest extends AbstractTest {
     }
 
     @Test
-    public void testAddedCategoriesAreSorted() throws Exception {
+    public void testAddedCategoriesAreSorted() {
         Event event = new Event();
 
         event.addCategory("CAR");

@@ -1,6 +1,6 @@
 package pha.ics.finder;
 
-import pha.ics.*;
+import pha.ics.DateFinder;
 import pha.ics.values.DateList;
 import pha.ics.values.DateValue;
 import pha.ics.values.OrdinalDay;
@@ -33,7 +33,7 @@ public class MonthlyDateFinder extends DateFinder {
         List<Integer> byMonthDay = repeatRule.getByMonthDay();
         List<OrdinalDay> byDay = repeatRule.getByDay();
         if (byMonthDay != null) {
-            dateSource = new MonthlyByMonthDayExpender(dateSource, byMonthDay);
+            dateSource = new MonthlyByMonthDayExpander(dateSource, byMonthDay);
 
             if (byDay != null) {
                 dateSource = new MonthlyByDayFilter(dateSource, byDay);

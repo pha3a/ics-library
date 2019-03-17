@@ -1,6 +1,8 @@
 package pha.ics.io.read;
 
-import pha.ics.*;
+import pha.ics.FieldName;
+import pha.ics.PropertyParameter;
+import pha.ics.TimeZone;
 import pha.ics.values.DateValue;
 import pha.ics.values.StringValue;
 import pha.ics.values.UTCOffset;

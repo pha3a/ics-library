@@ -3,16 +3,13 @@ package pha.ics.values;
 import org.junit.Test;
 import pha.ics.AbstractTest;
 import pha.ics.PropertyParameter;
-import pha.ics.WeekDay;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 
 public class RepeatRuleTest extends AbstractTest {

@@ -6,7 +6,8 @@ import pha.ics.PropertyParameter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by paul on 23/07/16.
