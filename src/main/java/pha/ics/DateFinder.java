@@ -1,6 +1,7 @@
 package pha.ics;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import pha.ics.finder.*;
 import pha.ics.values.*;
 
@@ -12,6 +13,13 @@ interface End {
      * @return true if the end condition has been met.
      */
     boolean reached(DateObject currentDate);
+
+    /**
+     * Did the last date fall exactly on the end or was it an overshoot. Mostly as issue for Repeat ends.
+     *
+     * @return true if the last calculated date was more than the target.
+     */
+    boolean overshot();
 }
 
 class CountEnd implements End {
@@ -26,11 +34,17 @@ class CountEnd implements End {
     public boolean reached(DateObject currentDate) {
         return countLeft-- == 0;
     }
+
+    @Override
+    public boolean overshot() {
+        return false;
+    }
 }
 
 class UntilEnd implements End {
 
     private DateObject endDate;
+    private boolean overshot = false;
 
     UntilEnd(DateObject until) {
 
@@ -39,7 +53,14 @@ class UntilEnd implements End {
 
     @Override
     public boolean reached(DateObject currentDate) {
-        return currentDate.isAfter(endDate);
+        boolean after = currentDate.isAfter(endDate);
+        overshot = after;
+        return after;
+    }
+
+    @Override
+    public boolean overshot() {
+        return overshot;
     }
 }
 
@@ -47,6 +68,11 @@ class InfiniteEnd implements End {
 
     @Override
     public boolean reached(DateObject currentDate) {
+        return false;
+    }
+
+    @Override
+    public boolean overshot() {
         return false;
     }
 }
@@ -108,7 +134,7 @@ public abstract class DateFinder {
      * @param targetDate to find
      * @return true if found
      */
-    public boolean find(@NotNull DateValue targetDate) {
+    boolean find(@NotNull DateValue targetDate) {
 
         DateObject dateToFind = targetDate.getDateObject();
 
@@ -151,4 +177,30 @@ public abstract class DateFinder {
     protected abstract void incrementDate();
 
 
+    /**
+     * Step through all the dates of the series until we get to the end, then return the last value.
+     *
+     * @return the last value of the serise.
+     */
+    @Nullable
+    DateObject getLast() {
+
+        initialise();
+
+        if (end instanceof InfiniteEnd) {
+            // Avoid infinite loop.
+            return null;
+        }
+
+        DateObject last = null;
+        while (!end.reached(currentDate)) {
+            last = currentDate;
+            moveToNextDate();
+        }
+
+        if (end instanceof UntilEnd) {
+            return last;
+        }
+        return currentDate;
+    }
 }

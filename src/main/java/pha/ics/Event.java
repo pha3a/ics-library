@@ -446,6 +446,32 @@ public class Event {
     }
 
     /**
+     * Calculate the last date of this event. This will be the same as the start date if the event is not repeating.
+     * The last data may be infinite if the event is repeating and there is no end date. But for most cases a repeating
+     * event will have a count or an until.
+     *
+     * @return The last date of this event
+     */
+    public DateObject getLastDate() {
+        DateObject result = null;
+
+        if (isRepeating()) {
+            RepeatRule repeatRule = getRepeatRule();
+            if (repeatRule.hasUntil()) {
+                return repeatRule.getUntil();
+            } else if (repeatRule.hasCount()) {
+                DateValue start = getDTStart();
+                DateList excludeDates = getExcludeDates();
+                DateFinder dateFinder = DateFinder.build(start, repeatRule, excludeDates);
+
+                return dateFinder.getLast();
+            }
+        }
+
+        return result;
+    }
+
+    /**
      * Does this event have attendees?
      *
      * @return true if the ATTENDEE field is present.

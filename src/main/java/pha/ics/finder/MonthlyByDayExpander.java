@@ -55,10 +55,18 @@ public class MonthlyByDayExpander implements Filter {
                             // Not the last month so discard
                             currentDays.remove();
                         } else {
-                            return useNextDay(nextDate);
+                            if (ordinalDay.getWeekDay().compareTo(currentDay) < 0) {
+                                currentDays.remove();
+                            } else {
+                                return useNextDay(nextDate);
+                            }
                         }
                     } else {
-                        return useNextDay(nextDate);
+                        if (ordinalDay.getWeekDay().compareTo(currentDay) < 0) {
+                            currentDays.remove();
+                        } else {
+                            return useNextDay(nextDate);
+                        }
                     }
                 }
 
@@ -77,15 +85,8 @@ public class MonthlyByDayExpander implements Filter {
      */
     private DateObject moveToNextWeek(DateObject nextDate) {
         // After we have generated days for the current week move to the next week
-        DateObject lastWeek = nextDate;
-        nextDate = nextDate.addWeeks(1);
 
-        if (nextDate.getMonth() != lastWeek.getMonth()) {
-            // If we have run off the end of the month get the next month
-            nextDate = source.getNextDate(lastWeek);
-            nextDate = nextDate.setMonthDay(1);
-        }
-        return nextDate;
+        return nextDate.addDays(7);
     }
 
     /**

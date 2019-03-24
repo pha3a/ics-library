@@ -24,7 +24,7 @@ public class WeeklyDateFinder extends DateFinder {
     @Override
     protected void initialise() {
         super.initialise();
-        setDay();
+        setFirstDay();
     }
 
     @Override
@@ -49,6 +49,27 @@ public class WeeklyDateFinder extends DateFinder {
             WeekDay weekDay = ordinalDay.getWeekDay();
 
             currentDate = currentDate.setDay(weekDay);
+        }
+    }
+
+    /**
+     * Scan the days list looking for the first than is after currentDate. This is to prevent us selecting
+     * a date before the start date.
+     */
+    private void setFirstDay() {
+
+        refillCurrentDays();
+
+        WeekDay currentDay = currentDate.getDay();
+
+        while (!currentDays.isEmpty()) {
+            OrdinalDay ordinalDay = currentDays.remove();
+            WeekDay weekDay = ordinalDay.getWeekDay();
+
+            if (weekDay.compareTo(currentDay) >= 0) {
+                currentDate = currentDate.setDay(weekDay);
+                return;
+            }
         }
     }
 

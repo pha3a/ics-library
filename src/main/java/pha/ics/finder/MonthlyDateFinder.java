@@ -42,7 +42,7 @@ public class MonthlyDateFinder extends DateFinder {
             dateSource = new MonthlyByDayExpander(dateSource, byDay);
         }
 
-        dateSource.initialise(currentDate);
+        currentDate = dateSource.initialise(currentDate);
     }
 
 
