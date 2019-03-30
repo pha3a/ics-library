@@ -145,7 +145,7 @@ public class CalendarWriter {
 
         // Using FieldName.values() we can fix the order the fields are written out in.
         for (FieldName fieldName : FieldName.values()) {
-            Value value = event.getFieldValue(fieldName);
+            Value value = event.getField(fieldName);
             if (value != null && !value.isEmpty()) {
                 List<PropertyParameter> parameters = value.getParameters();
                 if (value instanceof CompoundValue) {

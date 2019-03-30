@@ -32,12 +32,36 @@ public class EventTest extends AbstractTest {
 
         String dateTime = "20111212T100030Z";
         DateValue dateValue = new DateValue(dateTime, null);
-        event.setValue(FieldName.DTSTART, dateValue);
+        event.setField(FieldName.DTSTART, dateValue);
 
         String findDate = "20111219T100030Z";
         DateValue dateToFind = new DateValue(findDate, null);
 
         assertTrue("Event should contain date", event.containsDate(dateToFind));
+    }
+
+    @Test
+    public void testEventCopyDoesCopyAllFields() {
+        Event event = new Event();
+
+        RepeatRule rule = createRepeatRule("FREQ=WEEKLY;INTERVAL=1");
+        event.addValue(FieldName.RRULE, rule);
+
+        String dateTime = "20111212T100030Z";
+        DateValue dateValue = new DateValue(dateTime, null);
+        event.setField(FieldName.DTSTART, dateValue);
+
+        String dateEndTime = "20111212T100030Z";
+        DateValue dateEndValue = new DateValue(dateEndTime, null);
+        event.setField(FieldName.DTEND, dateEndValue);
+
+        Event targetEvent = new Event();
+
+        assertNotEquals("Events should be different", targetEvent, event);
+
+        targetEvent.copyFields(event.getFieldNames(), event);
+
+        assertEquals("Event should be the same", targetEvent, event);
     }
 
     @Test

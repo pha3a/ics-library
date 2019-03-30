@@ -124,7 +124,7 @@ public class Event {
      * @return true if the event is a repeating event.
      */
     public boolean isRepeating() {
-        return getFieldValue(FieldName.RRULE) != null;
+        return getField(FieldName.RRULE) != null;
     }
     public boolean isRepeatingYearly() {
         RepeatRule repeatRule = getRepeatRule();
@@ -144,7 +144,7 @@ public class Event {
     }
 
     public String getSummary() {
-        StringValue value = (StringValue) getFieldValue(FieldName.SUMMARY);
+        StringValue value = (StringValue) getField(FieldName.SUMMARY);
 
         return value != null ? value.getValue() : null;
     }
@@ -155,7 +155,7 @@ public class Event {
     }
 
     public String getDescription() {
-        StringValue description = (StringValue) getFieldValue(FieldName.DESCRIPTION);
+        StringValue description = (StringValue) getField(FieldName.DESCRIPTION);
         return description != null ? description.getValue() : null;
     }
 
@@ -170,13 +170,13 @@ public class Event {
 
 
     /**
-     * Get the raw named value.
+     * Get the raw field value.
      *
      * @param fieldName of the value to return
      * @return value or null if not defined
      */
     @Nullable
-    public Value getFieldValue(FieldName fieldName) {
+    public Value getField(FieldName fieldName) {
         return fields.get(fieldName);
     }
 
@@ -287,13 +287,30 @@ public class Event {
         return null;
     }
 
-    public void setValue(FieldName fieldName, Value value) {
+    /**
+     * Set the value of named field.
+     *
+     * @param fieldName to set
+     * @param value     to set
+     */
+    public void setField(FieldName fieldName, Value value) {
         if (value != null) {
             fields.put(fieldName, value);
         } else {
             fields.remove(fieldName);
         }
+    }
 
+    /**
+     * Copy the named fields from the given source event into this.
+     *
+     * @param fieldsToCopy from source
+     * @param sourceEvent  to copy from
+     */
+    public void copyFields(Collection<FieldName> fieldsToCopy, Event sourceEvent) {
+        for (FieldName fieldName : fieldsToCopy) {
+            setField(fieldName, sourceEvent.getField(fieldName));
+        }
     }
 
     /**
@@ -304,8 +321,8 @@ public class Event {
      * false if not or values not found.
      */
     public boolean isAfter(Event matching) {
-        DateValue dtStamp = (DateValue) getFieldValue(FieldName.DTSTAMP);
-        DateValue otherDtStamp = (DateValue) matching.getFieldValue(FieldName.DTSTAMP);
+        DateValue dtStamp = (DateValue) getField(FieldName.DTSTAMP);
+        DateValue otherDtStamp = (DateValue) matching.getField(FieldName.DTSTAMP);
 
         if (dtStamp != null) {
             if (dtStamp.isAfter(otherDtStamp)) {
@@ -315,8 +332,8 @@ public class Event {
             }
         }
 
-        DateValue lastModified = (DateValue) getFieldValue(FieldName.LAST_MODIFIED);
-        DateValue otherLastModified = (DateValue) matching.getFieldValue(FieldName.LAST_MODIFIED);
+        DateValue lastModified = (DateValue) getField(FieldName.LAST_MODIFIED);
+        DateValue otherLastModified = (DateValue) matching.getField(FieldName.LAST_MODIFIED);
         if (lastModified != null) {
             if (lastModified.isAfter(otherLastModified)) {
                 return true;
@@ -337,9 +354,15 @@ public class Event {
         return fields.get(FieldName.SEQUENCE) != null;
     }
 
+    /**
+     * Is the sequence number of this event before the given event?
+     *
+     * @param other event to compaer with
+     * @return true if this is before other or this has no sequence number.
+     */
     public boolean isSequenceBefore(Event other) {
-        IntegerValue sequence = (IntegerValue) getFieldValue(FieldName.SEQUENCE);
-        IntegerValue otherSeq = (IntegerValue) other.getFieldValue(FieldName.SEQUENCE);
+        IntegerValue sequence = (IntegerValue) getField(FieldName.SEQUENCE);
+        IntegerValue otherSeq = (IntegerValue) other.getField(FieldName.SEQUENCE);
 
         if (sequence == null && otherSeq != null) {
             return true;
@@ -351,15 +374,15 @@ public class Event {
     }
 
     public RepeatRule getRepeatRule() {
-        return (RepeatRule) getFieldValue(FieldName.RRULE);
+        return (RepeatRule) getField(FieldName.RRULE);
     }
 
     public DateValue getLastModified() {
-        return (DateValue) getFieldValue(FieldName.LAST_MODIFIED);
+        return (DateValue) getField(FieldName.LAST_MODIFIED);
     }
 
     public DateValue getDateStamp() {
-        return (DateValue) getFieldValue(FieldName.DTSTAMP);
+        return (DateValue) getField(FieldName.DTSTAMP);
     }
 
     /**
