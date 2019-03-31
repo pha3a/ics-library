@@ -72,38 +72,38 @@ class EventBuilder extends AbstractBuilder {
         try {
             switch (fieldName.getType()) {
                 case DATE:
-                    event.addValue(fieldName, new DateValue(value, params));
+                    event.addValueToField(fieldName, new DateValue(value, params));
                     break;
                 case INTEGER:
-                    event.addValue(fieldName, new IntegerValue(value, params));
+                    event.addValueToField(fieldName, new IntegerValue(value, params));
                     break;
                 case TEXT:
-                    event.addValue(fieldName, new StringValue(decode(value), params));
+                    event.addValueToField(fieldName, new StringValue(decode(value), params));
                     break;
                 case ADDRESS_TYPE:
-                    event.addValue(fieldName, new Address(value, params));
+                    event.addValueToField(fieldName, new Address(value, params));
                     break;
                 case RECUR:
-                    event.addValue(fieldName, RepeatRuleBuilder.build(value, params));
+                    event.addValueToField(fieldName, RepeatRuleBuilder.build(value, params));
                     break;
                 case DATE_LIST:
-                    event.addValue(fieldName, new DateList(value, params));
+                    event.addValueToField(fieldName, new DateList(value, params));
                     break;
                 case TEXT_LIST:
                     List<String> values = decodeList(value);
-                    event.addValue(fieldName, new StringList(values, params));
+                    event.addValueToField(fieldName, new StringList(values, params));
                     break;
                 case STATUS_TYPE:
-                    event.addValue(fieldName, Status.parse(value));
+                    event.addValueToField(fieldName, Status.parse(value));
                     break;
                 case CLASS_TYPE:
-                    event.addValue(fieldName, SecurityClass.parse(value));
+                    event.addValueToField(fieldName, SecurityClass.parse(value));
                     break;
                 case TRANSP_TYPE:
-                    event.addValue(fieldName, new StringValue(decode(value), params));
+                    event.addValueToField(fieldName, new StringValue(decode(value), params));
                     break;
                 case DURATION_TYPE:
-                    event.addValue(fieldName, DurationBuilder.build(value, params));
+                    event.addValueToField(fieldName, DurationBuilder.build(value, params));
                     break;
             }
         } catch (Exception e) {

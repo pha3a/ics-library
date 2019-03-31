@@ -48,7 +48,7 @@ public class Event {
      * @param fieldName to store the value against
      * @param value to store.
      */
-    public void addValue(FieldName fieldName, Value value) {
+    public void addValueToField(FieldName fieldName, Value value) {
         if (fields.containsKey(fieldName)) {
             Value oldValue = fields.get(fieldName);
 
@@ -393,7 +393,7 @@ public class Event {
      *
      * @param field of the value to remove.
      */
-    public void remove(FieldName field) {
+    public void removeField(FieldName field) {
         fields.remove(field);
     }
 

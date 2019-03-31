@@ -220,8 +220,7 @@ public class DateObject {
     }
 
     /**
-     * Return true if this date is newer than the other date. Compares the strings
-     * which may compare the date and time.
+     * Return true if this date is newer than(after) the other date.
      *
      * @param otherDate to compare this to
      * @return true if this date is later than otherDate, false if this is null
@@ -232,7 +231,18 @@ public class DateObject {
     }
 
     /**
-     * Return true if this date is older than the other date.
+     * Return true if this date is newer than(after) the other date.
+     *
+     * @param otherDate to compare this to
+     * @return true if this date is later than otherDate, false if this is null
+     */
+    public boolean isAfter(@NotNull Date otherDate) {
+
+        return value > otherDate.getTime();
+    }
+
+    /**
+     * Return true if this date is older than(before) the other date.
      *
      * @param otherDate to compare this to
      * @return true if this date is later than otherDate, false if this is null
@@ -240,6 +250,17 @@ public class DateObject {
     public boolean isBefore(@NotNull DateObject otherDate) {
 
         return value < otherDate.value;
+    }
+
+    /**
+     * Return true if this date is older than(before) the other date.
+     *
+     * @param otherDate to compare this to
+     * @return true if this date is later than otherDate, false if this is null
+     */
+    public boolean isBefore(@NotNull Date otherDate) {
+
+        return value < otherDate.getTime();
     }
 
     /**

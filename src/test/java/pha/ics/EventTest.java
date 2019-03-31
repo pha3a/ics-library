@@ -18,7 +18,7 @@ public class EventTest extends AbstractTest {
         Event event = new Event();
 
         RepeatRule rule = createRepeatRule("FREQ=WEEKLY;INTERVAL=1;BYDAY=MO");
-        event.addValue(FieldName.RRULE, rule);
+        event.addValueToField(FieldName.RRULE, rule);
 
         assertTrue("Repeat Rule should be true", event.isRepeating());
     }
@@ -28,7 +28,7 @@ public class EventTest extends AbstractTest {
         Event event = new Event();
 
         RepeatRule rule = createRepeatRule("FREQ=WEEKLY;INTERVAL=1");
-        event.addValue(FieldName.RRULE, rule);
+        event.addValueToField(FieldName.RRULE, rule);
 
         String dateTime = "20111212T100030Z";
         DateValue dateValue = new DateValue(dateTime, null);
@@ -45,7 +45,7 @@ public class EventTest extends AbstractTest {
         Event event = new Event();
 
         RepeatRule rule = createRepeatRule("FREQ=WEEKLY;INTERVAL=1");
-        event.addValue(FieldName.RRULE, rule);
+        event.addValueToField(FieldName.RRULE, rule);
 
         String dateTime = "20111212T100030Z";
         DateValue dateValue = new DateValue(dateTime, null);
